@@ -36,6 +36,7 @@ func BenchmarkSliceRectAreaWithInit(b *testing.B) {
 			{length: 24, width: 20},
 			{length: 25, width: 20},
 			{length: 26, width: 20},
+			{length: 27, width: 20},
 			{length: 28, width: 20},
 		}
 		_ = calc_area(xs3)
