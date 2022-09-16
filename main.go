@@ -78,11 +78,12 @@ func generic_specialisation() {
 }
 
 // cpu: Intel(R) Core(TM) i5-8257U CPU @ 1.40GHz
-// BenchmarkSliceShapeAreaWithInit-8        1000000               753.0 ns/op           720 B/op         13 allocs/op
-// BenchmarkSliceRectAreaWithInit-8         1000000               277.4 ns/op           560 B/op          3 allocs/op
-// BenchmarkSliceShapeAreaNoInit-8          1000000               406.0 ns/op           560 B/op          3 allocs/op
-// BenchmarkSliceRectAreaNoInit-8           1000000               285.2 ns/op           560 B/op          3 allocs/op
-// BenchmarkShapeCircle-8                   1000000                 0.7575 ns/op
+// BenchmarkSliceShapeAreaWithInit-8        1000000               485.8 ns/op           720 B/op         13 allocs/op
+
+// BenchmarkSliceRectAreaWithInit-8         1000000               176.6 ns/op           560 B/op          3 allocs/op
+// BenchmarkSliceShapeAreaNoInit-8          1000000               273.5 ns/op           560 B/op          3 allocs/op
+// BenchmarkSliceRectAreaNoInit-8           1000000               168.5 ns/op           560 B/op          3 allocs/op
+// BenchmarkShapeCircle-8                   1000000                 0.3490 ns/op
 
 // The difference in bytes corresp to the extra vpointer injected
 // (720 - 560)/10 = 160/10 = 16 bytes, space for 2 pointers.
