@@ -17,15 +17,22 @@ func type_assertion() {
 	fmt.Printf("Rectangle Area: %v\n", rarea)
 	fmt.Println()
 
-	println(Green + "Type Assertion: run time type deduction of the concrete value" + Reset)
+	println(Green + "Type Assertion: extract Rectangle out of rect1" + Reset)
 	rect1, ok := rect.(Rectangle)
 	if ok {
 		fmt.Printf(" %v\n", rect1)
 	}
 	fmt.Printf("Rectangle Area: %v\n", rect1.Area())
-	fmt.Printf("Rectangle radius: %v\n", rect1.length)
+
 	fmt.Println()
-	// https://go.dev/play/p/17OmKF_lbe5
+	println(Red + "Type Assertion: extract Circle out of rect1" + Reset)
+	circle1, ok := rect.(Circle)
+	if ok {
+		fmt.Printf("Extracting Circle out of Rectangle %v\n", circle1)
+	}
+	fmt.Printf("Circle Area: %v\n", circle1.Area())
+	fmt.Printf("Circle radius: %v\n", circle1.radius)
+	fmt.Println()
 
 }
 
