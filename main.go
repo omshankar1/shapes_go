@@ -14,10 +14,15 @@ func type_assertion() {
 	// Define 'Rectangle Shape'
 	println(Green + "Interface 101 " + Reset)
 	var rect Shape // Shape is an interface
+	// Value: <nil>    Type: <nil>
 	fmt.Printf("Value: %v    Type: %T\n", rect, rect)
+
 	rect = Rectangle{length: 10, width: 10}
+	// Value: Rectangle: {length: AREA:  10.000000, width: AREA:  10.000000}
+	// Type: main.Rectangle
 	fmt.Printf("Value: %v\n", rect)
 	fmt.Printf("Type: %T\n", rect)
+
 	rarea := rect.Area()
 	fmt.Printf("Rectangle Area: %v\n", rarea)
 	fmt.Println()
