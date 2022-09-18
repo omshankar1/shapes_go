@@ -4,15 +4,20 @@ import "fmt"
 
 func main() {
 	type_assertion()
-	type_switch()
-	generic_shapes()
-	generic_specialisation()
+	// type_switch()
+	// generic_shapes()
+	// generic_specialisation()
 }
 
 // Type Assertion - run time type deduction of the concrete value
 func type_assertion() {
-	var rect Shape
+	// Define 'Rectangle Shape'
+	println(Green + "Interface 101 " + Reset)
+	var rect Shape // Shape is an interface
+	fmt.Printf("Value: %v    Type: %T\n", rect, rect)
 	rect = Rectangle{length: 10, width: 10}
+	fmt.Printf("Value: %v\n", rect)
+	fmt.Printf("Type: %T\n", rect)
 	rarea := rect.Area()
 	fmt.Printf("Rectangle Area: %v\n", rarea)
 	fmt.Println()
@@ -20,9 +25,9 @@ func type_assertion() {
 	println(Green + "Type Assertion: extract Rectangle out of rect1" + Reset)
 	rect1, ok := rect.(Rectangle)
 	if ok {
-		fmt.Printf(" %v\n", rect1)
+		fmt.Printf("Rectangle ok: %t Value: %v, Type: %T\n", ok, rect1, rect1)
+		fmt.Printf("Rectangle Area: %v\n", rect1.Area())
 	}
-	fmt.Printf("Rectangle Area: %v\n", rect1.Area())
 
 	fmt.Println()
 	println(Red + "Type Assertion: extract Circle out of rect1" + Reset)
@@ -30,8 +35,7 @@ func type_assertion() {
 	if ok {
 		fmt.Printf("Extracting Circle out of Rectangle %v\n", circle1)
 	}
-	fmt.Printf("Circle Area: %v\n", circle1.Area())
-	fmt.Printf("Circle radius: %v\n", circle1.radius)
+	fmt.Printf("Circle ok: %t Value: %v, Type: %T", ok, circle1, circle1)
 	fmt.Println()
 
 }
