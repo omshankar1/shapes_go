@@ -19,6 +19,7 @@ func Zip[P1 fmt.Stringer, P2 fmt.Stringer](slice1 []P1, slice2 []P2) []Pair[P1, 
 	}
 	zip := make([]Pair[P1, P2], slice_len)
 	for i := 0; i < slice_len; i++ {
+		// Construct a Pair literal and assign it []Pair
 		zip[i] = Pair[P1, P2]{slice1[i], slice2[i]}
 	}
 	return zip

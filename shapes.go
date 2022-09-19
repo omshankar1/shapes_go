@@ -66,5 +66,5 @@ type Shape interface {
 type AREA float64
 
 func (a AREA) String() string {
-	return fmt.Sprintf("AREA:  %f", a)
+	return fmt.Sprintf("%f", a)
 }

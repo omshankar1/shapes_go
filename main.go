@@ -18,7 +18,7 @@ func type_assertion() {
 	fmt.Printf("Value: %v    Type: %T\n", rect, rect)
 
 	rect = Rectangle{length: 10, width: 10}
-	// Value: Rectangle: {length: AREA:  10.000000, width: AREA:  10.000000}
+	// Value: Rectangle: {length: 10.000000, width: 10.000000}
 	// Type: main.Rectangle
 	fmt.Printf("Value: %v\n", rect)
 	fmt.Printf("Type: %T\n", rect)
@@ -42,7 +42,6 @@ func type_assertion() {
 	}
 	fmt.Printf("Circle ok: %t Value: %v, Type: %T", ok, circle1, circle1)
 	fmt.Println()
-
 }
 
 // Type Switching - run time switch on concrete values based on its type
