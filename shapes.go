@@ -56,7 +56,7 @@ func (c Circle) String() string {
 // Shape interface definition
 
 type Shape interface {
-	fmt.Stringer // Go: String; Java: toString(); Python: __str__()
+	fmt.Stringer // Java: toString(); Python: __str__(); C++: ostream op overload
 	Area() AREA
 }
 
