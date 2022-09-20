@@ -5,8 +5,8 @@ import "fmt"
 func main() {
 	type_assertion()
 	type_switch()
-	// generic_shapes()
-	// generic_specialisation()
+	generic_shapes()
+	generic_specialisation()
 }
 
 // Type Assertion - run time type deduction of the concrete value
