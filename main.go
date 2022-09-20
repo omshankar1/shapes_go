@@ -4,24 +4,25 @@ import "fmt"
 
 func main() {
 	type_assertion()
-	// type_switch()
+	type_switch()
 	// generic_shapes()
 	// generic_specialisation()
 }
 
 // Type Assertion - run time type deduction of the concrete value
 func type_assertion() {
-	// Define 'Rectangle Shape'
 	println(Green + "Interface 101 " + Reset)
-	var rect Shape // Shape is an interface
-	// Value: <nil>    Type: <nil>
+	// A variable 'rect' of Interface type Shape
+	var rect Shape
 	fmt.Printf("Value: %v    Type: %T\n", rect, rect)
+	// Value: <nil>    Type: <nil>
 
+	// Assign Rectangle struct literal to Shape var 'rect'
 	rect = Rectangle{length: 10, width: 10}
-	// Value: Rectangle: {length: 10.000000, width: 10.000000}
-	// Type: main.Rectangle
 	fmt.Printf("Value: %v\n", rect)
 	fmt.Printf("Type: %T\n", rect)
+	// Value: Rectangle: {length: 10.000000, width: 10.000000}
+	// Type: main.Rectangle
 
 	rarea := rect.Area()
 	fmt.Printf("Rectangle Area: %v\n", rarea)
