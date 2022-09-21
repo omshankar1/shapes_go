@@ -3,6 +3,14 @@ package main
 import "fmt"
 import "math"
 
+// ************************************************
+// Shape interface definition
+
+type Shape interface {
+	fmt.Stringer // Java: toString(); Python: __str__(); C++: ostream op overload
+	Area() AREA
+}
+
 // *********** Structs in Go ***********************
 // Struct Rectangle
 type Rectangle struct {
@@ -51,16 +59,6 @@ func (c Circle) Area() AREA {
 func (c Circle) String() string {
 	return fmt.Sprintf("Circle: {radius: %v}", c.radius)
 }
-
-// ************************************************
-// Shape interface definition
-
-type Shape interface {
-	fmt.Stringer // Java: toString(); Python: __str__(); C++: ostream op overload
-	Area() AREA
-}
-
-// Rectangle, Square and Circle conform to Shape interface
 
 // ************************************************
 type AREA float64
